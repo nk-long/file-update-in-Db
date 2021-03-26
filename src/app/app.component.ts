@@ -21,20 +21,13 @@ export class AppComponent {
   constructor(private uploadservice:UploaindfileService){
 
   }
-
+//hello
   getFileData(event)
   {
     console.log(event.target.files[0]);
-    
-
     this.file=event.target.files[0];
-
-
     this.uploadData.append("file",this.file);
-
     console.log(this.uploadData);
-    
-
   }
 
 
@@ -45,15 +38,12 @@ export class AppComponent {
           console.log(res);
           
       },error =>console.log(error)
-      
-      
     )    
 
   }
 
   getimage()
   {
-
     this.uploadservice.getImgFromDb(this.imageId).subscribe(
       (data)=>{
         this.responsedata=data;
